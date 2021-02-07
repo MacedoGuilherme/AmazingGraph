@@ -9,6 +9,28 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2 {
+  color: #766f68;
+}
+
+.header--menu-mobile {
+  display: none;
+  width: 42px;
+  height: 40px;
+  margin-top: 3px;
+}
+
+.header--menu-mobile div {
+  width: 100%;
+  height: 5px;
+  background: #5c4b4b;
+}
+
+.header--menu-mobile div + div {
+  margin-top: 5px;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -32,6 +54,159 @@ header .container {
 }
 
 img {
-  height: 400px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+main .container {
+  display: flex;
+}
+
+.main--content {
+  position: relative;
+  left: 135px;
+  z-index: 1;
+}
+
+.main--content h1 {
+  width: 480px;
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+
+.main--content h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+  margin-bottom: 5rem;
   width: 400px;
+}
+
+.main--content a {
+  font-size: 1.5rem;
+  background: #d2872c;
+  color: #fff;
+  padding: 20px 105px;
+  border-radius: 15px;
+}
+
+.main--image {
+  height: 450px;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .main--content {
+    left: 60px;
+  }
+  .main--content h1 {
+    font-size: 3em;
+    width: 390px;
+  }
+
+  .main--content h2 {
+    width: 380px;
+    margin-bottom: 4rem;
+  }
+
+  .main--image {
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  header .container {
+    padding: 30px 60px;
+  }
+
+  main {
+    margin-bottom: 30px;
+  }
+
+  main .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .main--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    left: 0;
+    z-index: 0;
+    text-align: center;
+  }
+
+  .main--content h1 {
+    font-size: 3em;
+    width: 360px;
+    margin-top: 1rem;
+  }
+
+  .main--content h2 {
+    width: 100%;
+    width: 360px;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+  }
+
+  .main--image {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  header .container {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .header--menu {
+    display: none;
+  }
+
+  .header--menu-mobile {
+    display: block;
+  }
+
+  .header--logo a {
+    font-size: 2.2rem;
+  }
+
+  main {
+    margin-bottom: 30px;
+  }
+
+  main .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .main--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    left: 0;
+    z-index: 0;
+    text-align: center;
+  }
+
+  .main--content h1 {
+    font-size: 3em;
+    width: 360px;
+    margin-top: 1rem;
+  }
+
+  .main--content h2 {
+    width: 100%;
+    width: 360px;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .main--image {
+    height: auto;
+  }
 }
